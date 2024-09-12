@@ -1,0 +1,75 @@
+/* Apply a background image and color to the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://th.bing.com/th/id/OIP.Y9DsHACuG56aF6l0i5PNPgHaE8?rs=1&pid=ImgDetMain') no-repeat center center fixed; 
+    background-size: cover;
+    color: #333;
+}
+
+/* Container styling */
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    color: #ff6347; /* Tomato color for header */
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styling */
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Select and checkbox styling */
+select, input[type="checkbox"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Button styling */
+button {
+    padding: 10px 15px;
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Bill section styling */
+#bill {
+    margin-top: 20px;
+}
+
+#summary {
+    font-size: 18px;
+    line-height: 1.6;
+}

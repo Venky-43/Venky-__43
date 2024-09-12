@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Bill Generator</title>
+    <link rel="stylesheet" href="sty.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Pizzamania!</h1>
+        <form id="pizzaForm">
+            <label for="pizzaType">Select Pizza Type:</label>
+            <select id="pizzaType">
+                <option value="veg">Veg Pizza - 200 INR</option>
+                <option value="nonveg">Non-Veg Pizza - 300 INR</option>
+                <option value="deluxVeg">Delux Veg Pizza - 400 INR</option>
+                <option value="deluxNonveg">Delux Non-Veg Pizza - 500 INR</option>
+            </select>
+
+            <div id="extras">
+                <label for="extraCheese">Extra Cheese:</label>
+                <input type="checkbox" id="extraCheese">
+
+                <label for="extraToppings">Extra Toppings:</label>
+                <input type="checkbox" id="extraToppings">
+            </div>
+
+            <label for="takeAway">Opt for Take Away:</label>
+            <input type="checkbox" id="takeAway">
+
+            <button type="button" onclick="generateBill()">Generate Bill</button>
+        </form>
+
+        <div id="bill">
+            <h2>Order Summary</h2>
+            <p id="summary"></p>
+        </div>
+    </div>
+    <script src="Book.js"></script>
+</body>
+</html>
