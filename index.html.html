@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venkannababu Kothapalli | Portfolio</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(45deg, #121212, #1c1c3c, #ff9800);
+            background-size: 400% 400%;
+            animation: moveBackground 10s infinite alternate ease-in-out;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        @keyframes moveBackground {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
+        }
+
+        .profile-container {
+            margin-top: 30px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(255, 152, 0, 0.8);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 15px 0;
+            color: #ff9800;
+            animation: moveText 4s infinite alternate ease-in-out;
+        }
+
+        @keyframes moveText {
+            0% { transform: translateX(-20px); }
+            50% { transform: translateX(20px); }
+            100% { transform: translateX(-20px); }
+        }
+
+        h2.profession {
+            font-size: 2em;
+            color: #ffcc80;
+            animation: moveProfession 4s infinite alternate ease-in-out;
+            margin-top: 10px;
+        }
+
+        @keyframes moveProfession {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff9800;
+            color: white;
+            padding: 12px 24px;
+            margin: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background: #ff5722;
+            transform: scale(1.1);
+        }
+
+        .section {
+            display: none;
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin: 40px auto;
+            max-width: 800px;
+            box-shadow: 0 0 15px #ff9800;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .skills-container, .projects-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .skill, .project {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            color: #ffcc80;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .skill:hover, .project:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 10px #ffcc80;
+        }
+
+        /* Different Background for Each Section */
+        #about {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        #skills {
+            background: rgba(0, 0, 255, 0.1);
+        }
+
+        #projects {
+            background: rgba(0, 255, 0, 0.1);
+        }
+
+        #contact {
+            background: rgba(255, 0, 0, 0.1);
+        }
+
+        /* Social Links Styles */
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5em;
+            margin: 0 15px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .social-links a:hover {
+            color: #ff9800;
+            transform: scale(1.2);
+        }
+
+        /* Spacing for Sections */
+        .btn-container {
+            margin-top: 40px;
+        }
+
+    </style>
+    <script>
+        function toggleSection(id) {
+            var section = document.getElementById(id);
+            if (section.style.display === "none" || section.style.display === "") {
+                section.style.display = "block";
+                window.scrollTo({ top: section.offsetTop, behavior: 'smooth' });
+            } else {
+                section.style.display = "none";
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="profile-container">
+        <img src="kvbb.jpg" class="profile-img">
+    </div>
+
+    <h1>Hi, I am Venkannababu Kothapalli</h1>
+    <h2 class="profession">Software Developer</h2>
+
+    <div class="btn-container">
+        <button class="btn" onclick="toggleSection('about')">About Me</button>
+        <button class="btn" onclick="toggleSection('skills')">Skills</button>
+        <button class="btn" onclick="toggleSection('projects')">Projects</button>
+        <button class="btn" onclick="toggleSection('contact')">Contact</button>
+    </div>
+
+    <div id="about" class="section">
+        <h2>About Me</h2>
+        <p>I am a Developer specializing in programming, frameworks, and AI.</p>
+    </div>
+
+    <div id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill">Python</div>
+            <div class="skill">Java</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Django</div>
+        </div>
+    </div>
+
+    <div id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project">PizzaBill Generator</div>
+            <div class="project">Product Catalog</div>
+        </div>
+    </div>
+
+    <div id="contact" class="section">
+        <h2>Contact</h2>
+        <p>📞 Mobile: +91 8885688748</p>
+        <p>📧 Email: <a href="mailto:venkannababukothapalli716@gmail.com" class="btn">Send Email</a></p>
+    </div>
+
+    <!-- Social Links Section -->
+    <div class="social-links">
+        <a href="https://github.com/Venky-43" target="_blank">GitHub</a>
+        <a href="https://leetcode.com/u/Babu_43/" target="_blank">LeetCode</a>
+        <a href="https://www.linkedin.com/in/venkannababu-kothapalli-87b649259/" target="_blank">LinkedIn</a>
+    </div>
+</body>
+</html>
+
+
+
+
+
